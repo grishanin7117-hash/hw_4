@@ -15,7 +15,7 @@ def test ():
     browser.element('.react-datepicker__year-select').click()
     browser.element('.react-datepicker__year-select option[value ="1944"]').click()
     browser.element('[aria-label="Choose Tuesday, July 4th, 1944"]').click()
-    picture_path = str(Path.home().joinpath('Desktop', "qa.bmp").resolve())
+    picture_path = str(Path.home().joinpath('Pycharmprojects', 'hw_4', 'images', 'qa.jpg').resolve())
     browser.element('#uploadPicture').set_value(picture_path)
     browser.element('label[for="hobbies-checkbox-1"]').click()
     browser.element('#currentAddress').type('red polyna')
