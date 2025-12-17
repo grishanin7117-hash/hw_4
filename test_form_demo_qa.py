@@ -2,14 +2,10 @@ import os
 from selene import browser, have, by, be
 from selene.support.conditions import be as sbe
 
-# Функция для получения абсолютного пути к картинке КАК В ВАШЕМ ПРИМЕРЕ
 def get_image_path(image_name):
-    # Получаем абсолютный путь к картинке ТОЧНО КАК У ВАС
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    # Только добавляем папку 'images' перед именем файла
     return os.path.join(current_dir, 'images', image_name)
 
-# Тест с вашими данными
 def test():
     browser.open('https://demoqa.com/automation-practice-form')
 
@@ -31,8 +27,8 @@ def test():
 
     browser.element('#subjectsInput').type('commerce').press_enter()
 
-    # Загрузка изображения ТОЧНО КАК В ВАШЕМ ПРИМЕРЕ
-    image_path = get_image_path('qa11.jpg')
+
+    image_path = get_image_path('qa11.jpg.jpg')
     browser.element('#uploadPicture').send_keys(image_path)
 
     browser.element('label[for="hobbies-checkbox-1"]').click()
